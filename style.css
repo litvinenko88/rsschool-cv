@@ -8,26 +8,74 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
   line-height: 26px;
-  background: #FFDC98;
+  background: #ffdc98;
+}
+
+:root {
+  --white-color: #fff;
+  --black-color: #29292b;
+  --orange-color: #ff9c02;
 }
 
 /***********************************************/
 
-.wrapper{
-   max-width: 1900px;
-   margin: 0 auto;
-   display: grid;
-   grid-template-columns: repeat(12, 1fr);
-
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  max-width: 1900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
-.main{
-   background: #ededed;
-   padding: 10px 0 0 0;
-   grid-column: 1 / 9;
+.main {
+  background: var(--white-color);
+  padding: 80px 0 0 100px;
+  grid-column: 1 / 9;
+}
+.main__container-person {
+  display: flex;
+  align-items: center;
+}
+.main__container-img {
+  position: relative;
+  z-index: 10;
+  width: 350px;
+  height: 350px;
+  border: 10px solid var(--black-color);
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--orange-color);
+}
+.main__img {
+  width: 350px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
-.info{
-   grid-column: 9 / 13;
+.main__text-container {
+  background: var(--orange-color);
+  padding: 50px 0px 50px 80px;
+  width: 100%;
+  position: absolute;
+  right: -420px;
+}
+
+.main__person-name{
+   text-transform: uppercase;
+   font-size: 32px;
+   line-height: 50px;
+}
+
+.main__person-profession{
+   font-size: 24px;
+   font-weight: 400;
+}
+
+.info {
+  grid-column: 9 / 13;
 }
 /***********************/
 
@@ -65,14 +113,14 @@ body {
   width: 100%;
   height: 2px;
   background-color: #616161;
-  transition-duration: .25s;
+  transition-duration: 0.25s;
 }
 .menu__btn > span::before {
-  content: '';
+  content: "";
   top: -8px;
 }
 .menu__btn > span::after {
-  content: '';
+  content: "";
   top: 8px;
 }
 .menu__box {
@@ -85,31 +133,28 @@ body {
   margin: 0;
   padding: 80px 0;
   list-style: none;
-  background-color: #ECEFF1;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
-  transition-duration: .25s;
+  background-color: #eceff1;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition-duration: 0.25s;
 }
 .menu__item {
   display: block;
   padding: 12px 24px;
   color: #333;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   font-weight: 600;
   text-decoration: none;
-  transition-duration: .25s;
+  transition-duration: 0.25s;
 }
 .menu__item:hover {
-  background-color: #CFD8DC;
+  background-color: #cfd8dc;
 }
 /*********************************************/
-.header{
-   background: #29292B;
-   
+.header {
+  background: var(--black-color);
 }
 
-
-.footer{
-   background: #29292B;
-   
+.footer {
+  background: var(--black-color);
 }
