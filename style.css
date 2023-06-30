@@ -101,7 +101,7 @@ body {
 .wrapper {
   position: relative;
   overflow: hidden;
-  max-width: 1900px;
+  width: 1520px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -146,14 +146,14 @@ body {
 
 .main__person-name {
   text-transform: uppercase;
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 600;
   color: var(--white-color);
   line-height: 50px;
 }
 
 .main__person-profession {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 400;
   color: var(--white-color);
   text-transform: uppercase;
@@ -210,6 +210,41 @@ body {
 }
 .code__text{
   font-size: 16px;
+}
+
+.education__wrapper{
+  padding-left: 100px;
+  width: 90%;
+  color: var(--black-color);
+}
+.education__year{
+  font-size: 18px;
+  line-height: 28px;
+}
+.education__time-box{
+  display: flex;
+  align-items: center;
+
+}
+
+.education__container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.education__container-text{
+  line-height: 32px;
+  
+}
+
+.education__container-text h3{
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.education__container-text span{
+  font-weight: 600;
 }
 /***********************************/
 .contact {
@@ -303,7 +338,7 @@ body {
   position: absolute;
   top: -35px;
   color: var(--white-color);
-  font-size: 24px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -343,8 +378,8 @@ body {
 }
 
 .icon-list {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   background: var(--orange-color);
   margin-right: 15px;
 }
