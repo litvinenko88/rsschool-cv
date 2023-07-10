@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 8.6rem;
+  font-family: var(--family-inter);
+}
+
+:root {
+  --family-forum: "Forum", cursive;
+  --family-inter: "Inter", sans-serif;
+  --font-size-40: 4rem;
+  --font-size-30: 3rem;
+  --font-size-20: 2rem;
+  --font-size-15: 1.5rem;
+  --line-height-50: 5rem;
+  --line-height-40: 4rem;
+  --color-gray: #8e8e8e;
+  --color-white: #fff;
+  --color-black: #000;
+}
