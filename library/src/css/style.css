@@ -1,3 +1,5 @@
+@import "normalize.css";
+
 * {
   box-sizing: border-box;
 }
@@ -7,12 +9,13 @@ html {
 }
 
 body {
-  font-size: 8.6rem;
+  font-size: 1.6rem;
   font-family: var(--family-inter);
+  background: var(--color-gray);
 }
 
 :root {
-  --family-forum: "Forum", cursive;
+  --family-forum: "Forum", sans-serif;
   --family-inter: "Inter", sans-serif;
   --font-size-40: 4rem;
   --font-size-30: 3rem;
@@ -23,4 +26,171 @@ body {
   --color-gray: #8e8e8e;
   --color-white: #fff;
   --color-black: #000;
+  --color-brown: #bb945f;
+}
+
+.wrapper {
+  max-width: 144rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+/*////////////////////////////////////////////////////////*/
+.header {
+  grid-column: 1 / 13;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  background: var(--color-black);
+}
+.header__text-logo {
+  margin: 0;
+  align-items: center;
+  color: var(--color-white);
+  font-size: var(--font-size-30);
+  font-weight: 400;
+  font-family: var(--family-forum);
+}
+.header__wrapper-nav {
+  display: flex;
+  align-items: center;
+}
+.header__container-nav-list {
+  display: flex;
+  align-items: center;
+  margin-right: 4rem;
+}
+.header__list {
+  list-style: none;
+  margin-right: 3rem;
+  display: inline-block;
+}
+.header__list:last-child {
+  margin-right: 0;
+}
+.header__list::after {
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  background: var(--color-white);
+  transition: width 0.4s ease-in-out;
+}
+.header__list:hover::after,
+.header__list:focus::after {
+  width: 100%;
+}
+.header__link {
+  text-decoration: none;
+  color: var(--color-white);
+}
+.header__container-svg svg {
+  margin: 0;
+  padding: 0;
+  color: #000;
+}
+/*//////////////////////////////////////////////////*/
+.welcome {
+  grid-column: 1 / 13;
+  height: 600px;
+  background-image: url("../img/Welcome.png");
+  padding-top: 22rem;
+}
+.welcome__text-conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-black);
+  width: 60rem;
+  height: 22rem;
+  padding: 35px 40px;
+}
+.welcome__text {
+  margin: 0;
+  color: var(--color-white);
+  font-size: var(--font-size-40);
+  font-weight: 400;
+  font-family: var(--family-forum);
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 5rem;
+}
+/*////////////////////////////////////////////////////////*/
+.about {
+  background: var(--color-white);
+  grid-column: 1 / 13;
+  padding-top: 2rem;
+}
+.adout__container-heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.adout__heading {
+  font-size: var(--font-size-40);
+  font-family: var(--family-forum);
+  font-weight: 400;
+  margin: 0;
+}
+.adout__container-heading span {
+  border: 1px solid var(--color-black);
+  width: 5rem;
+  background: var(--color-black);
+  display: inline-block;
+}
+.about__text {
+  margin: 0;
+  font-size: var(--font-size-20);
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.about__container-slider {
+  margin-bottom: 4rem;
+}
+.about__container-slider-img {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+.about__button-slider-container {
+  display: flex;
+  justify-content: center;
+}
+.about__slider-button {
+  background: var(--color-black);
+  border: 1px solid var(--color-black);
+  margin-right: 1rem;
+  border-radius: 50%;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+}
+.about__slider-button:last-child {
+  margin: 0;
+}
+.about__activ-slider {
+  background: var(--color-brown);
+  border: none;
+}
+/*////////////////////////////////////////////////////////*/
+.favorites {
+  background: rgb(55, 195, 47);
+  grid-column: 1 / 13;
+}
+/*////////////////////////////////////////////////////////*/
+.coffee-shop {
+  background: rgb(30, 174, 138);
+  grid-column: 1 / 13;
+}
+/*////////////////////////////////////////////////////////*/
+.contacts {
+  background: rgb(30, 117, 144);
+  grid-column: 1 / 13;
+}
+/*////////////////////////////////////////////////////////*/
+.library-cards {
+  background: rgb(54, 21, 163);
+  grid-column: 1 / 13;
 }
